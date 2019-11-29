@@ -1,0 +1,15 @@
+<mat-toolbar class="pl-4 pr-4">
+    <i (click)="toggleNav()" class="fas fa-bars mr-2 d-md-none d-lg-none d-xl-none"></i>
+    <div *ngIf="profile_image == ''" class="image-div"></div>
+
+    <button class="button-chevron" mat-button [matMenuTriggerFor]="menu">
+        Hello! Juan&nbsp;&nbsp;<i class="fas fa-chevron-down"></i>
+    </button>
+
+    <mat-menu class="menu-chevron" #menu="matMenu" xPosition="before" yPosition="below" [overlapTrigger]="false">
+        <button class="logout-btn" mat-menu-item (click)="myProfile()">
+            My Profile
+        </button>
+        <button class="logout-btn" mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+</mat-toolbar>

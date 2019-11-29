@@ -1,0 +1,31 @@
+<div class="login">
+    <mat-card class="example-card text-center p-5">
+        <mat-card-header>
+            <mat-card-title class="mb-3">
+                <p>
+                    <img src="./assets/images/logo.png" />
+                </p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                <mat-form-field class="d-block" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" required="true" name="email" [(ngModel)]="user.email" #email
+                        placeholder="Enter email" />
+                </mat-form-field>
+                <mat-form-field class="d-block" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="{{ type }}" required="true" name="password" [(ngModel)]="user.password"
+                        #password placeholder="Enter password" />
+                    <i (click)="type = 'text'" matSuffix *ngIf="type === 'password'" class="far fa-eye"></i>
+                    <i (click)="type = 'password'" matSuffix *ngIf="type === 'text'" class="far fa-eye-slash"></i>
+                </mat-form-field>
+
+                <button [disabled]="!loginForm.valid" mat-raised-button type="submit" class="login-btn btn-block btn">
+                    Log in
+                </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,168 @@
+// MODAL
+.dialog-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-btn {
+  background: #3c063b;
+  border-radius: 25px;
+  color: white;
+  height: 50px;
+  width: 150px;
+  font-weight: bolder;
+}
+.form-div {
+  .list-shops {
+    .custom-card {
+      .image-div {
+        height: 500px;
+        width: auto;
+        min-height: 500px;
+        min-width: auto;
+        background: #454545;
+        border: 1px solid #dddddd;
+      }
+      border-radius: 0.25rem;
+      background-color: #fff;
+      word-wrap: break-word;
+      .card-body {
+        .card-title {
+          height: 5vh;
+        }
+      }
+    }
+  }
+  .add-btn {
+    background: #3c063b;
+    border-radius: 25px;
+    color: white;
+    height: 50px;
+    width: 150px;
+    font-weight: bolder;
+  }
+  .cancel-btn {
+    border-radius: 25px;
+    color: white;
+    height: 50px;
+    width: 150px;
+    font-weight: bolder;
+  }
+}
+// !- MODAL
+
+.page {
+  overflow: hidden;
+  font-family: Quicksand !important;
+}
+.nav-hidden {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  background: white;
+  z-index: 8000;
+  transform: translateX(-100%);
+  width: 200px;
+  -webkit-transform: translateX(-100%);
+}
+
+.nav-initial {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  display: none;
+}
+
+.nav-active {
+  position: absolute;
+  left: 0;
+  // height: 100vh;
+  // background-image: linear-gradient(#3c063b, #cb265b);
+  background-image: linear-gradient(#004c4c, #1cb2b2);
+  z-index: 9999;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  width: 200px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.nav-active {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.nav-hidden {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+.overlay {
+  height: 100vh;
+  width: 100%;
+  z-index: 8000;
+  position: fixed;
+  top: 0;
+  background: rgba(33, 33, 33, 1);
+  opacity: 0.48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: bgcolors 60s linear infinite;
+  animation: bgcolors 60s linear infinite;
+}
+
+.main-outlet {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  // height: 100vh;
+  overflow-x: hidden;
+  .sidenav {
+    flex: 1;
+    background-image: linear-gradient(black, #dddddd);
+  }
+
+  .main {
+    flex: 5;
+  }
+}

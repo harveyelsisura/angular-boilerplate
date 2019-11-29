@@ -1,0 +1,31 @@
+<mat-toolbar>
+    <b class="web m-1 text-center">
+        <img src="./assets/images/logo-white.png" />
+    </b>
+    <b class="mob">Megaworld Lifestyle</b>
+</mat-toolbar>
+
+<nav class="sidenav">
+    <div class="nav-list-con">
+        <p class="title_text">GENERAL</p>
+        <ul class="list-unstyled" (click)="hideNav()">
+            <li class="nav_div" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/main']">
+                <div>
+                    <span>Dashboard</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-list-con">
+        <p class="title_text">MANAGEMENTS</p>
+        <ul id="management-list" class="list-unstyled" (click)="hideNav()">
+            <li class="nav_div" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/main/users']">
+                <div>
+                    <span>App Users</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

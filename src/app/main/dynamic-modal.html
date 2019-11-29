@@ -1,0 +1,25 @@
+<mat-dialog-content class="form-div">
+    <b>Message</b>
+    <div class="dropdown-divider"></div>
+    <span class="d-flex text-left mb-5 word-break-word">
+        HELLO!
+    </span>
+</mat-dialog-content>
+<div class="d-flex justify-content-center mt-3">
+    <button class="btn add-btn m-2" (click)="submit()">
+        Done
+    </button>
+</div>
+<ng-template #no_data>
+    <b class="d-flex justify-content-center m-5">No data found</b>
+</ng-template>
+<ng-template #load>
+    <div style="text-align: center; overflow: hidden;">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</ng-template>

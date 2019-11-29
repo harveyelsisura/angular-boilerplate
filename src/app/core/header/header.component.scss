@@ -1,0 +1,28 @@
+mat-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: solid 1px #dddddd;
+  //   background-image: linear-gradient(to right, #3c063b, #cb265b);
+  //   color: white;
+  .button-chevron {
+    outline: 0;
+  }
+  .fa-bars {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+  }
+  .menu-chevron {
+    color: black;
+    outline: 0;
+  }
+  .image-div {
+    height: 35px;
+    width: 35px;
+    min-height: 35px;
+    min-width: 35px;
+    border-radius: 50%;
+    background: #454545;
+    border: 5px solid #dddddd;
+  }
+}

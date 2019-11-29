@@ -1,0 +1,55 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
+  .example-card {
+    border-radius: 25px;
+    mat-card-header {
+      .mat-card-title {
+        font-family: Quicksand !important;
+        font-size: 25px !important;
+        font-weight: bolder;
+        width: 100%;
+        p {
+          width: 350px;
+          display: inline-block;
+          img {
+            width: inherit;
+          }
+        }
+      }
+    }
+    mat-card-content {
+      input {
+        font-family: Quicksand !important;
+        font-weight: bolder;
+      }
+      i{
+          margin-top: -2px;;
+      }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .example-card {
+      margin: 15px;
+      mat-card-header {
+        .mat-card-title {
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .login-btn {
+    background-image: linear-gradient(to right, #dddddd, black);
+    border-radius: 25px;
+    color: white;
+    height: 50px;
+  }
+  i {
+    font-size: 1.3em;
+  }
+}
